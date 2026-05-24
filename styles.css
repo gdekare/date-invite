@@ -15,10 +15,10 @@ body{background:var(--bg);display:flex;align-items:center;justify-content:center
 .controls{margin-top:8px}
 .btn{padding:14px 28px;border-radius:10px;border:0;font-weight:700;cursor:pointer;font-size:18px}
 .yes{background:linear-gradient(90deg,#ff8a8a,var(--accent));color:#fff;box-shadow:0 6px 18px rgba(255,90,90,0.16)}
-.hidden{display:none}
+.hidden{display:none!important} /* ← ВАЖНО: этот класс должен быть! */
 .thanks{color:#1a8a37;font-weight:700;margin-top:12px}
 .gif-block{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;z-index:999}
 .gif-wrap{background:#fff;padding:22px;border-radius:14px;max-width:90%;max-height:90vh;overflow:auto;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.25)}
-#gif-img{width:100%;max-width:420px;border-radius:10px}
+#gif-img{width:100%;max-width:420px;border-radius:10px;cursor:pointer}
 .gif-text{margin:12px 0 6px;font-weight:700;color:#222}
 .close-btn{margin-top:10px;background:#eee;color:#333}
