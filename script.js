@@ -1,24 +1,26 @@
-const yesBtn = document.getElementById('yes');
-const gifBlock = document.getElementById('gif-block');
-const closeGif = document.getElementById('closeGif');
-const gifImg = document.getElementById('gif-img');
-
-yesBtn.addEventListener('click', () => {
-  yesBtn.disabled = true;
-  yesBtn.textContent = 'Отправлено';
-  gifBlock.classList.remove('hidden');
-});
-
-closeGif.addEventListener('click', () => {
-  gifBlock.classList.add('hidden');
-});
-
-// Закрытие по клику на фон (overlay)
-document.querySelector('.overlay').addEventListener('click', () => {
-  gifBlock.classList.add('hidden');
-});
-
-// Закрытие по клику на саму гифку
-gifImg.addEventListener('click', () => {
-  gifBlock.classList.add('hidden');
+document.addEventListener('DOMContentLoaded', function() {
+  const yesBtn = document.getElementById('yes');
+  const gifBlock = document.getElementById('gif-block');
+  const closeGifBtn = document.getElementById('closeGif');
+  const overlay = document.querySelector('.overlay');
+  
+  if (yesBtn && gifBlock) {
+    yesBtn.addEventListener('click', function() {
+      yesBtn.disabled = true;
+      yesBtn.textContent = 'Отправлено ✓';
+      gifBlock.style.display = 'flex';
+    });
+  }
+  
+  if (closeGifBtn) {
+    closeGifBtn.addEventListener('click', function() {
+      gifBlock.style.display = 'none';
+    });
+  }
+  
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      gifBlock.style.display = 'none';
+    });
+  }
 });
