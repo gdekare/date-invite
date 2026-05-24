@@ -1,0 +1,24 @@
+:root{
+  --bg:linear-gradient(180deg,#f7fbff,#ffffff);
+  --card:#fff;
+  --accent:#ff5a5a;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:30px}
+.wrap{width:100%;max-width:560px}
+.invite-card{background:var(--card);padding:36px;border-radius:14px;box-shadow:0 10px 30px rgba(30,30,60,0.08);text-align:center}
+.title{font-size:40px;margin:0;color:#222;letter-spacing:4px}
+.event{font-size:18px;color:var(--muted);margin:14px 0}
+.note{color:#444;margin-bottom:18px}
+.controls{margin-top:8px}
+.btn{padding:14px 28px;border-radius:10px;border:0;font-weight:700;cursor:pointer;font-size:18px}
+.yes{background:linear-gradient(90deg,#ff8a8a,var(--accent));color:#fff;box-shadow:0 6px 18px rgba(255,90,90,0.16)}
+.hidden{display:none}
+.thanks{color:#1a8a37;font-weight:700;margin-top:12px}
+.gif-block{position:fixed;inset:0;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;z-index:999}
+.gif-wrap{background:#fff;padding:22px;border-radius:14px;max-width:90%;max-height:90vh;overflow:auto;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,0.25)}
+#gif-img{width:100%;max-width:420px;border-radius:10px}
+.gif-text{margin:12px 0 6px;font-weight:700;color:#222}
+.close-btn{margin-top:10px;background:#eee;color:#333}
